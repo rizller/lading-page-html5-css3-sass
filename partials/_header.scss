@@ -1,0 +1,86 @@
+header{
+    width: 100%;
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; //espaça o item dentro do nav, entre eles (entre as divs, cada item fica num canto)
+}
+
+
+i{
+    color: $white-normal;
+}
+
+.header-icons{
+    display: flex;
+    gap: 14px;
+}
+
+//muda a cor dos ícones deader-icons quando passa o mouse em cima dos links da tag a
+.header-icons a:hover{
+    i{
+        color:$red-light;
+        animation: translateY 0.8s infinite alternate;
+    }
+}
+
+//animação para que o ícone 'suba' e aumente um pouco de tamanho quando passar o mouse em cima
+@keyframes translateY {
+    from{
+        transform: translateY(0) scale(1);
+    }
+    to{
+        transform: translateY(-8px) scale(1.1);
+    }
+}
+
+.header-button{
+    border: 1px solid $white-normal;
+    padding: 8px 24px;
+    border-radius: 4px;
+    color: $white-normal;
+    background-color: transparent;
+    transition: background-color 0.8s;//transição do hover para não mudar a cor do botão de uma vez
+}
+
+//muda a cor do botão quando passar mouse em cima
+.header-button:hover{
+    border: 1px solid $red-light;
+    background-color: $red-light;
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+//adicionar responsavidade, em um tamanho específico de tela, ele aplica o que está ai dentro
+@media screen and (max-width: 768px){
+
+    .header-content{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    //aplica o estilo na imagem dentro do header logo
+    .header-logo img{
+        width: 160px;
+        margin-top: 46px;
+    }
+
+    .header-button{
+        display: none;
+    }
+
+    i{
+        margin-top: 16px;
+        font-size: 34px;
+    }
+}

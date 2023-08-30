@@ -1,0 +1,43 @@
+//zera as formatações padrões do HTML
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+//funcionalidade de import é do SASS, não é uma funcionalidade que o CSS puro tem.
+@import "partials/colors";
+@import "partials/header";
+@import "partials/layout";
+
+body{
+    font-family: 'Sora', sans-serif;
+    width: 100%;
+    height: 100vh;//100vh é altura inteira do documento que ele consegue pegar (view high)
+    position: relative;
+
+    background-color: $primiray-normal;
+}
+
+button{
+    font-family: 'Sora', sans-serif;
+    cursor: pointer;
+}
+
+//puxa 100% das imagens
+svg{
+    width: 100%;
+}
+
+//Faz cin qye todas as iagens sempre tentem ocupar 100% do espaço disponível, ajustando assim de acordo com  o tamanho da tela do dispositivo
+img{
+    width: 100%;
+}
+
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+
+}
